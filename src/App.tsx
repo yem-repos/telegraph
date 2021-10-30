@@ -1,23 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import styles from './App.module.scss';
+import Cell from './components/flexLayout/Cell/Cell';
+import Column from './components/flexLayout/Column/Column';
+import FlexContainer from './components/flexLayout/Container/Container';
+
+// Server
+// Config
+// Layout flex
+
+// console.log('styles', styles);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <FlexContainer>
+    
+    {/* Side */}
+    <Column size=".25" style={{backgroundColor: 'red'}}>
+      <Cell>Side</Cell>
+    </Column>
+
+    {/* Main */}
+    <Column style={{backgroundColor: 'green'}}>
+      <Cell>Main</Cell>
+    </Column>
+  </FlexContainer>
+  // return ;
 }
 
 export default App;
+
+// cell - row | col

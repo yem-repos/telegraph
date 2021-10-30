@@ -1,0 +1,25 @@
+.Column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    // Size 1
+    &[data-size="1"] {
+        flex-grow: 1;
+    }
+
+    // Size .75
+    &[data-size=".75"] {
+        flex-grow: .75;
+    }
+
+    // Size .5
+    &[data-size=".5"] {
+        flex-grow: .5;
+    }
+
+    // Size .25
+    &[data-size=".25"] {
+        flex-grow: .25;
+    }
+}
